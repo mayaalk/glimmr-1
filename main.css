@@ -1,19 +1,39 @@
 @import url(https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 
-h1, h2, h3, h4, h5, h6, p { margin: 0; }
+h1, h2, h3, h4 {
+  font-family: "Poppins", serif;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
 
-h1 { font-size: 36px; }
-h2 { font-size: 32px; }
-h3 { font-size: 28px; }
-h4 { font-size: 24px; }
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
 h4 { font-size: 20px; }
-h4 { font-size: 16px; }
 
-p { font-size: 16px; }
+hr {
+  margin: 16px 0;
+  border-top: 1px solid purple;
+}
 
-.c-backdrop { background-color: black; }
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
 
-.c-banner {
+.c-background { background-color: black; }
+
+.c-body {
+  height: 667px;
+  margin: auto;
+  position: relative;
+  width: 375px;
+}
+
+.c-header {
   align-items: center;
   background-color: purple;
   color: white;
@@ -21,22 +41,9 @@ p { font-size: 16px; }
   height: 76px; /*flush with menu*/
 }
 
-.c-banner__logo {
-  font-style: italic;
+.c-header__logo {
+  font-family: "Pacifico", serif;
   padding: 16px;
-}
-
-.c-content {
-  color: purple;
-  height: calc(667px - 2 * 76px - 2 * 16px);
-  overflow: auto;
-  padding: 16px;
-}
-
-.c-content__block {
-  display: flex;
-  flex-flow: column;
-  gap: 16px;
 }
 
 .c-footer {
@@ -44,6 +51,26 @@ p { font-size: 16px; }
   left: 0;
   position: absolute;
   right: 0;
+}
+
+.c-main {
+  background-color: white;
+  color: purple;
+  height: calc(667px - 2 * 76px - 2 * 16px);
+  line-height: 1.5;
+  overflow: auto;
+  padding: 16px;
+}
+
+.c-main__head {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.c-main__body {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
 }
 
 .c-menu {
@@ -65,24 +92,17 @@ p { font-size: 16px; }
   padding: 16px;
 }
 
+.c-menu__item { padding: 16px; }
+
 .c-menu__list {
   display: flex;
   flex-flow: column;
 }
 
-.c-menu__list-item { padding: 16px; }
+.c-nav { background-color: purple; }
 
-.c-nav-bar { background-color: purple; }
-
-.c-nav-bar__home {
+.c-nav__icon {
   display: block;
   padding: 16px;
-}
-
-.c-view {
-  background-color: white;
-  height: 667px;
-  margin: auto;
-  position: relative;
-  width: 375px;
+  width: min-content;
 }
