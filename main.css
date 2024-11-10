@@ -1,11 +1,18 @@
 @import url(https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css);
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 
+body {
+  background-color: white;
+  color: purple;
+  font-family: "Open Sans", sans-serif;
+}
+
 h1, h2, h3, h4 {
   font-family: "Poppins", serif;
   font-weight: normal;
   line-height: 1;
   margin: 0;
+  text-align: center;
 }
 
 h1 { font-size: 32px; }
@@ -19,7 +26,6 @@ hr {
 }
 
 p {
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   margin: 0;
 }
@@ -32,6 +38,20 @@ p {
   position: relative;
   width: 375px;
 }
+
+.c-button {
+  background-color: purple;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 16px;
+  width: min-content;
+}
+
+.c-button--back { background-color: gray; }
+
+.c-button--main { margin: auto; }
 
 .c-header {
   align-items: center;
@@ -53,21 +73,50 @@ p {
   right: 0;
 }
 
-.c-main {
-  background-color: white;
+.c-form {
+  max-height: calc(667px - 2 * 64px - 2 * 16px - 24px - 1.6px - 2 * 16px);
+  overflow: auto;
+}
+
+.c-form__description, .c-form__select {
+  border: 1px solid purple;
+  border-radius: 4px;
   color: purple;
+  padding: 8px;
+}
+
+.c-form__description {
+  min-height: 128px;
+  resize: none;
+}
+
+.c-form__group {
+  border: 0;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.c-form__label { margin-bottom: 16px; }
+
+.c-form__submit {
+  border: 0;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+.c-content {
   height: calc(667px - 2 * 76px - 2 * 16px);
   line-height: 1.5;
   overflow: auto;
   padding: 16px;
 }
 
-.c-main__head {
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.c-main__body {
+.c-content__body {
   display: flex;
   flex-flow: column;
   gap: 16px;
@@ -99,6 +148,31 @@ p {
   flex-flow: column;
 }
 
+.c-modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  padding: 64px 32px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.c-modal__container {
+  background-color: white;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.c-modal__body {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+
 .c-nav { background-color: purple; }
 
 .c-nav__icon {
@@ -106,3 +180,9 @@ p {
   padding: 16px;
   width: min-content;
 }
+
+.js-modal-start.is-hidden { display: none; }
+
+.js-modal-finish.is-hidden { display: none; }
+
+.js-text-contact.is-hidden { display: none; }
