@@ -85,7 +85,7 @@ p {
   padding: 16px;
 }
 
-.c-content__head {
+.c-content__head--narrow {
   margin: auto;
   width: min-content;
 }
@@ -97,6 +97,7 @@ p {
 }
 
 .c-button {
+  align-self: center;
   background-color: purple;
   border: 1px solid white;
   border-radius: 4px;
@@ -191,5 +192,3 @@ p {
 }
 
 .is-hidden { display: none; }
-
-.u-align-center { align-self: center; }
