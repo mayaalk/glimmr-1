@@ -9,13 +9,9 @@ const DOMModalStart = document.querySelector(".js-modal-start");
 const DOMModalStartInner = document.querySelector(".js-modal-start-inner");
 const DOMModalFinish = document.querySelector(".js-modal-finish");
 const DOMModalFinishInner = document.querySelector(".js-modal-finish-inner");
-const DOMModalReport = document.querySelector(".js-modal-report");
 
-const DOMNameSelect = document.querySelector(".js-name-select");
-
-const DOMContactYes = document.querySelector(".js-contact-yes");
-const DOMContactNo = document.querySelector(".js-contact-no");
-const DOMContactText = document.querySelector(".js-text-contact");
+const DOMFormReport = document.querySelector(".js-form-report");
+const DOMTextContact = document.querySelector(".js-text-contact");
 
 document.addEventListener("keyup", (event) => {
   if (event.key === "Escape") {
@@ -27,18 +23,20 @@ document.addEventListener("keyup", (event) => {
 DOMButtonReport.addEventListener("click", () => {
   DOMModalStart.classList.remove("is-hidden");
 
-  DOMModalReport.reset();
-  DOMModalReport.scroll(0, 0);
+  DOMFormReport.reset();
+  DOMFormReport.scroll(0, 0);
 });
 
 DOMButtonSubmit.addEventListener("click", (event) => {
   event.preventDefault();
 
-  if (DOMNameSelect.value > 0) {
-    if (DOMContactYes.checked) {
-      DOMContactText.classList.remove("is-hidden");
+  const inputs = new FormData(DOMFormReport);
+
+  if (inputs.get("name") > 0) {
+    if (inputs.get("contact") === "yes") {
+      DOMTextContact.classList.remove("is-hidden");
     } else {
-      DOMContactText.classList.add("is-hidden");
+      DOMTextContact.classList.add("is-hidden");
     }
 
     DOMModalStart.classList.add("is-hidden");

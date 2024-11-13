@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feedback</title>
-  <link rel="stylesheet" href="main.css" />
-  <script defer src="main.js"></script>
+  <link rel="stylesheet" href="feedback.css" />
+  <script defer src="feedback.js"></script>
 </head>
 <body class="c-body">
   <header class="c-header">
@@ -13,36 +13,50 @@
     <details class="c-header__menu c-menu">
       <summary class="c-menu__icon"></summary>
       <nav class="c-menu__list">
-        <a class="c-menu__item" href="index.html"><img alt="Home" src="icons/google-fonts-home.svg" /></a>
+        <a class="c-menu__item" href="index.html"><img alt="Community Guidelines" src="icons/google-fonts-community.svg" /></a>
         <a class="c-menu__item" href="resources.html"><img alt="Resources" src="icons/google-fonts-resources.svg" /></a>
         <a class="c-menu__item" href="feedback.html"><img alt="Feedback" src="icons/google-fonts-feedback.svg" /></a>
       </nav>
     </details>
   </header>
-
   <main>
-    <section class="c-content">
+    <section class="c-content js-page-feedback">
       <h2 class="c-content__head">Feedback</h2>
       <hr />
-
-      <form class="feedback-form" action="#" method="post">
-        <label for="satisfaction">1. On a scale of 1-5, with 5 being the highest, how satisfied are you with your experience?</label>
-        <input type="number" id="satisfaction" name="satisfaction" min="1" max="5" required />
-
-        <label for="recommend">2. On a scale of 1-5, with 5 being the highest, how likely are you to recommend this app?</label>
-        <input type="number" id="recommend" name="recommend" min="1" max="5" required />
-
-        <label for="features">3. Are there any features you would like to see added? (Limit of 500 words)</label>
-        <textarea id="features" name="features" maxlength="3000" placeholder="Limit of 500 words..."></textarea>
-
-        <label for="suggestions">4. Please share any other feedback or suggestions you have (Limit of 500 words)</label>
-        <textarea id="suggestions" name="suggestions" maxlength="3000" placeholder="Limit of 500 words..."></textarea>
-
-        <button type="submit" class="c-button c-button--main">Submit Feedback</button>
+      <form class="c-feedback js-form-feedback">
+        <label class="c-label c-feedback__rating" for="f-happy">
+          On a scale of 1 to 5, how happy are you with our app?
+          <input class="c-input" type="number" id="f-happy" name="happy" min="1" max="5" />
+        </label>
+        <fieldset class="c-fieldset">
+          <legend class="c-legend">Would you recommend it to a friend?</legend>
+          <label class="c-label" for="f-recommend-yes">
+            <input id="f-recommend-yes" name="recommend" type="radio" value="yes" />
+            Yes
+          </label>
+          <label class="c-label" for="f-recommend-no">
+            <input id="f-recommend-no" name="recommend" type="radio" value="no" />
+            No
+          </label>
+        </fieldset>
+        <label for="f-ideas">Do you have any ideas for how to make it better?</label>
+        <textarea class="c-textarea" id="f-ideas" maxlength="1500" name="ideas" placeholder="300 words or less"></textarea>
+        <label for="f-share">Is there anything else you'd like to share?</label>
+        <textarea class="c-textarea" id="f-share" maxlength="1500" name="share" placeholder="300 words or less"></textarea>
+        <button class="c-button c-button--main js-button-submit" type="submit">Submit</button>
       </form>
     </section>
+    <aside class="c-modal js-modal-confirm is-hidden">
+      <article class="c-modal__container js-modal-confirm-inner">
+        <h3 class="c-modal__head">Thank You</h3>
+        <hr />
+        <div class="c-modal__body">
+          <p>Thank you for your feedback. We'll make sure it gets to the right people, whether that's customer relations or our developer team.</p>
+          <button class="c-button c-button--main js-button-ok" type="button">OK</button>
+        </div>
+      </article>
+    </aside>
   </main>
-
   <footer class="c-footer">
     <nav class="c-nav">
       <a class="c-nav__icon" href="index.html"><img alt="Home" src="icons/google-fonts-home.svg" /></a>

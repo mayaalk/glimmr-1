@@ -1,0 +1,9 @@
+@import "main.css";
+
+.c-feedback {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+
+.c-feedback__rating { gap: 16px; }

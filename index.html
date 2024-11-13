@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glimmr - Community Guidelines</title>
-  <link rel="stylesheet" href="community-guidelines.css" />
-  <script defer src="community-guidelines.js"></script>
+  <link rel="stylesheet" href="community.css" />
+  <script defer src="community.js"></script>
 </head>
 <body class="c-body">
   <header class="c-header">
@@ -34,10 +34,10 @@
       <article class="c-modal__container js-modal-start-inner">
         <h3 class="c-modal__head">Report a User</h3>
         <hr />
-        <form class="c-modal__body c-report js-modal-report">
+        <form class="c-modal__body c-report js-form-report">
           <p>We're truly sorry that you've had a bad experience on our platform. Your safety and comfort is our top priority.</p>
           <label for="f-name">Who do you need to report? *</label>
-          <select class="c-report__select js-name-select" id="f-name" required>
+          <select class="c-input" id="f-name" name="name" required>
             <option value="0"></option>
             <option value="1">Noel</option>
             <option value="2">Haven</option>
@@ -45,50 +45,50 @@
             <option value="4">Kit</option>
             <option value="5">Madison</option>
           </select>
-          <fieldset class="c-report__group">
-            <legend class="c-report__label">Can you tell us what happened?</legend>
-            <label for="f-safety">
-              <input id="f-safety" name="contact" type="checkbox" value="safety" />
+          <fieldset class="c-fieldset">
+            <legend class="c-legend">Can you tell us what happened?</legend>
+            <label class="c-label" for="f-safety">
+              <input id="f-safety" name="report" type="checkbox" value="safety" />
               I felt unsafe.
             </label>
-            <label for="f-consent">
-              <input id="f-consent" name="contact" type="checkbox" value="consent" />
+            <label class="c-label" for="f-consent">
+              <input id="f-consent" name="report" type="checkbox" value="consent" />
               My boundaries weren't respected.
             </label>
-            <label for="f-honesty">
-              <input id="f-honesty" name="contact" type="checkbox" value="honesty" />
+            <label class="c-label" for="f-honesty">
+              <input id="f-honesty" name="report" type="checkbox" value="honesty" />
               I was lied to.
             </label>
-            <label for="f-honesty">
-              <input id="f-honesty" name="contact" type="checkbox" value="honesty" />
+            <label class="c-label" for="f-other">
+              <input id="f-other" name="report" type="checkbox" value="other" />
               Something else happened.
             </label>
           </fieldset>
           <label for="f-description">Would you like to provide any other information?</label>
-          <textarea class="c-report__description" id="f-description"></textarea>
-          <fieldset class="c-report__group">
-            <legend class="c-report__label">Do you consent to us reviewing your messages?</legend>
-            <label for="f-consent-yes">
-              <input id="f-consent-yes" name="consent" type="radio" value="yes" />
+          <textarea class="c-textarea" id="f-description" maxlength="1500" name="description" placeholder="300 words or less"></textarea>
+          <fieldset class="c-fieldset">
+            <legend class="c-legend">Do you consent to us reviewing your messages?</legend>
+            <label class="c-label" for="f-review-yes">
+              <input id="f-review-yes" name="review" type="radio" value="yes" />
               Yes
             </label>
-            <label for="f-consent-no">
-              <input id="f-consent-no" name="consent" type="radio" value="no" />
+            <label class="c-label" for="f-review-no">
+              <input id="f-review-no" name="review" type="radio" value="no" />
               No
             </label>
           </fieldset>
-          <fieldset class="c-report__group">
-            <legend class="c-report__label">Would you like to talk to one of our Community Advocates?</legend>
-            <label for="f-contact-yes">
-              <input class="js-contact-yes" id="f-contact-yes" name="contact" type="radio" value="yes" />
+          <fieldset class="c-fieldset">
+            <legend class="c-legend">Would you like to talk to one of our Community Advocates?</legend>
+            <label class="c-label" for="f-contact-yes">
+              <input id="f-contact-yes" name="contact" type="radio" value="yes" />
               Yes
             </label>
-            <label for="f-contact-no">
-              <input class="js-contact-no" id="f-contact-no" name="contact" type="radio" value="no" />
+            <label class="c-label" for="f-contact-no">
+              <input id="f-contact-no" name="contact" type="radio" value="no" />
               No
             </label>
           </fieldset>
-          <fieldset class="c-report__submit">
+          <fieldset class="c-fieldset c-report__submit">
             <button class="c-button js-button-submit" type="submit">Submit</button>
             <button class="c-button c-button--back js-button-cancel" type="button">Cancel</button>
           </fieldset>
