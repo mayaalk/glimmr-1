@@ -1,5 +1,6 @@
 "use strict";
 
+const DOMSearchInput = document.querySelector(".js-search-input");
 const DOMSearchButton = document.querySelector(".js-search-button");
 
 const DOMResourceList = document.querySelector(".js-resource-list");
@@ -12,6 +13,27 @@ const DOMResourceBack = document.querySelector(".js-resource-back");
 
 DOMSearchButton.addEventListener("click", (event) => {
   event.preventDefault();
+
+  const List = [];
+
+  DOMResourceNames.forEach((Name, i) => {
+    const Link = DOMResourceLinks[i];
+
+    if (Name.textContent.toLowerCase().includes(DOMSearchInput.value.toLowerCase())) {
+      Link.classList.remove("is-hidden");
+      List.push(Link);
+    } else {
+      Link.classList.add("is-hidden");
+    }
+  });
+
+  List.forEach((Link, i, arr) => {
+    if (i < arr.length - 1) {
+      Link.classList.add("has-sibling");
+    } else {
+      Link.classList.remove("has-sibling");
+    }
+  });
 });
 
 DOMResourceLinks.forEach((Link, i) => {

@@ -191,4 +191,4 @@ p {
   width: min-content;
 }
 
-.is-hidden { display: none; }
+.is-hidden { display: none !important; }
