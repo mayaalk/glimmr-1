@@ -49,7 +49,11 @@ p {
   width: min-content;
 }
 
-.c-button--back { background-color: gray; }
+.c-button--back {
+  background-color: white;
+  border: 1px solid purple;
+  color: purple;
+}
 
 .c-button--main { margin: auto; }
 
@@ -64,62 +68,6 @@ p {
 .c-header__logo {
   font-family: "Pacifico", serif;
   padding: 16px;
-}
-
-.c-footer {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-}
-
-.c-form {
-  max-height: calc(667px - 2 * 64px - 2 * 16px - 24px - 1.6px - 2 * 16px);
-  overflow: auto;
-}
-
-.c-form__description, .c-form__select {
-  border: 1px solid purple;
-  border-radius: 4px;
-  color: purple;
-  padding: 8px;
-}
-
-.c-form__description {
-  min-height: 128px;
-  resize: none;
-}
-
-.c-form__group {
-  border: 0;
-  display: flex;
-  flex-flow: column;
-  gap: 16px;
-  margin: 0;
-  padding: 0;
-}
-
-.c-form__label { margin-bottom: 16px; }
-
-.c-form__submit {
-  border: 0;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 0;
-}
-
-.c-content {
-  height: calc(667px - 2 * 76px - 2 * 16px);
-  line-height: 1.5;
-  overflow: auto;
-  padding: 16px;
-}
-
-.c-content__body {
-  display: flex;
-  flex-flow: column;
-  gap: 16px;
 }
 
 .c-menu {
@@ -141,11 +89,24 @@ p {
   padding: 16px;
 }
 
-.c-menu__item { padding: 16px; }
-
 .c-menu__list {
   display: flex;
   flex-flow: column;
+}
+
+.c-menu__item { padding: 16px; }
+
+.c-content {
+  height: calc(667px - 2 * 76px - 2 * 16px);
+  line-height: 1.5;
+  overflow: auto;
+  padding: 16px;
+}
+
+.c-content__body {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
 }
 
 .c-modal {
@@ -173,6 +134,13 @@ p {
   gap: 16px;
 }
 
+.c-footer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
 .c-nav { background-color: purple; }
 
 .c-nav__icon {
@@ -181,40 +149,4 @@ p {
   width: min-content;
 }
 
-.js-modal-start.is-hidden { display: none; }
-
-.js-modal-finish.is-hidden { display: none; }
-
-.js-text-contact.is-hidden { display: none; }
-
-.search-bar {
-    display: flex;
-    margin: 20px 0;
-  }
-  
-.search-bar input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px; /* Rounded only on the left side */
-    outline: none;
-  }
-  
-.search-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: purple;
-    border: 1px solid purple;
-    border-left: none;
-    border-radius: 0 4px 4px 0; /* Rounded only on the right side */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-.search-button:hover {
-    background-color: purple;
-  }
-  
+.is-hidden { display: none; }
