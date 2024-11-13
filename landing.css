@@ -9,7 +9,8 @@
 
 .c-landing__logo { font-size: 64px; }
 
-.c-landing__form {
+.c-landing__link {
+  align-items: center;
   display: flex;
   flex-flow: column;
   gap: 16px;
