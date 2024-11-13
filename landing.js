@@ -1,9 +1,7 @@
 "use strict";
 
-const DOMButtonLogin = document.querySelector(".js-button-login");
+const DOMButtonSignIn = document.querySelector(".js-button-sign-in");
 
-DOMButtonLogin.addEventListener("click", (event) => {
-  event.preventDefault();
-
+DOMButtonSignIn.addEventListener("click", () => {
   window.location = "community.html";
 });

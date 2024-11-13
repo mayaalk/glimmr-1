@@ -16,12 +16,7 @@
   padding: 8px;
 }
 
-.c-search__button {
-  background-color: gray;
-  border: 1px solid gray;
-  border-radius: 0 4px 4px 0; /*right side*/
-  cursor: default;
-}
+.c-search__button { border-radius: 0 4px 4px 0; } /*right side*/
 
 .c-resources { margin: 0; }
 

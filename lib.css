@@ -85,6 +85,11 @@ p {
   padding: 16px;
 }
 
+.c-content__head {
+  margin: auto;
+  width: min-content;
+}
+
 .c-content__body {
   display: flex;
   flex-flow: column;
@@ -98,7 +103,12 @@ p {
   color: white;
   cursor: pointer;
   padding: 16px;
-  width: min-content;
+}
+
+.c-button--disabled {
+  background-color: gray;
+  border: 1px solid gray;
+  cursor: default;
 }
 
 .c-button--light {
