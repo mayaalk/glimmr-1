@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resources - Glimmr</title>
-  <link rel="stylesheet" href="main.css" />
-  <script defer src="main.js"></script>
+  <title>Glimmr - Resources</title>
+  <link rel="stylesheet" href="resources.css" />
+  <script defer src="resources.js"></script>
 </head>
 <body class="c-body">
   <header class="c-header">
@@ -13,59 +13,65 @@
     <details class="c-header__menu c-menu">
       <summary class="c-menu__icon"></summary>
       <nav class="c-menu__list">
-        <a class="c-menu__item" href="#"><img alt="Community Guidelines" src="icons/google-fonts-community.svg" /></a>
+        <a class="c-menu__item" href="index.html"><img alt="Community Guidelines" src="icons/google-fonts-community.svg" /></a>
         <a class="c-menu__item" href="resources.html"><img alt="Resources" src="icons/google-fonts-resources.svg" /></a>
-        <a class="c-menu__item" href="#"><img alt="Feedback" src="icons/google-fonts-feedback.svg" /></a>
+        <a class="c-menu__item" href="feedback"><img alt="Feedback" src="icons/google-fonts-feedback.svg" /></a>
       </nav>
     </details>
   </header>
-  
   <main>
-    <section class="c-content">
+    <section class="c-content js-resource-list">
       <h2 class="c-content__head">Resources</h2>
       <hr />
-
-      <div class="search-bar">
-        <input type="text" placeholder="Search resources..." />
-        <button class="search-button">Search</button>
-      </div>
-
-      <div class="resource-list">
-        <h3 class="c-content__subhead">Available Articles</h3>
-        <hr />
-        
-        <article class="resource-item">
-          <a href="articles.html" class="resource-link">
-            <h3>Understanding Online Safety</h3>
-            <p>Learn essential tips for staying safe online.</p>
+      <article class="c-content__body">
+        <form class="c-search">
+          <label class="c-search__label" for="f-search">Search</label>
+          <input class="c-search__input" disabled id="f-search" placeholder="Search by title" type="text" />
+          <button class="c-search__button c-button js-search-button" disabled type="submit">Search</button>
+        </form>
+        <dl class="c-resources">
+          <a class="c-resources__link c-link js-resource-link" href="javascript:void(0)">
+            <div>
+              <dt class="c-link__head js-resource-name">How to Report a User Effectively</dt>
+              <dd class="c-link__body">A guide to reporting inappropriate behavior on platforms.</dd>
+            </div>
+            <img alt="Link" src="icons/google-fonts-link.svg" />
           </a>
-        </article>
-        
-        <hr />
-        
-        <article class="resource-item">
-          <a href="articles.html" class="resource-link">
-            <h3>How to Report a User Effectively</h3>
-            <p>A guide to reporting inappropriate behavior on platforms.</p>
+          <hr />
+          <a class="c-resources__link c-link js-resource-link" href="javascript:void(0)">
+            <div>
+              <dt class="c-link__head js-resource-name">Supporting Mental Health While Dating</dt>
+              <dd class="c-link__body">Strategies for maintaining emotional well-being while dating.</dd>
+            </div>
+            <img alt="Link" src="icons/google-fonts-link.svg" />
           </a>
-        </article>
-        
-        <hr />
-        
-        <article class="resource-item">
-          <a href="articles.html" class="resource-link">
-            <h3>Supporting Mental Health While Dating</h3>
-            <p>Strategies for maintaining emotional well-being while dating.</p>
+          <hr />
+          <a class="c-resources__link c-link js-resource-link" href="javascript:void(0)">
+            <div>
+              <dt class="c-link__head js-resource-name">Understanding Online Safety</dt>
+              <dd class="c-link__body">Learn essential tips for staying safe online.</dd>
+            </div>
+            <img alt="Link" src="icons/google-fonts-link.svg" />
           </a>
-        </article>
-        
-      </div>
+        </dl>
+      </article>
+    </section>
+    <section class="c-content js-resource-item is-hidden">
+      <h2 class="c-content__head js-resource-head">How to Report a User Effectively</h2>
+      <hr />
+      <article class="c-content__body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi diam ligula, mollis pharetra eros eu, egestas eleifend odio. Donec non risus ultricies ligula consequat bibendum. Ut nec risus ex. Proin quis sapien eget felis rutrum convallis nec et ex. Etiam purus erat, egestas ac nisi non, ultricies laoreet augue. Sed sed risus quis odio iaculis faucibus. Integer posuere tellus et elementum cursus. Curabitur fermentum nec tortor quis laoreet. Suspendisse dictum, augue non convallis commodo, diam ipsum dapibus augue, vitae lacinia tortor velit a nisi. Aenean at nibh dictum, ornare enim vitae, volutpat sapien. Duis lobortis finibus venenatis. Phasellus fringilla sodales elit sed faucibus. Etiam tincidunt arcu et lorem dapibus scelerisque. Maecenas eget libero dictum, rutrum purus ac, sagittis velit. Curabitur sem felis, aliquet a justo ut, condimentum congue ex. Aenean pretium est nec porttitor pretium.</p>
+        <p>Nullam efficitur placerat eros nec sagittis. Aliquam lacinia risus sed gravida fringilla. Maecenas sed quam tempus, tempus ipsum sit amet, finibus mi. Praesent nibh purus, tempor interdum risus eget, porta efficitur neque. Proin a tellus non arcu placerat efficitur eu eget eros. Suspendisse potenti. Ut accumsan congue ipsum nec laoreet. Ut placerat sit amet magna sed rhoncus. Nulla sed dictum quam. Maecenas vulputate pellentesque facilisis. In iaculis libero a nibh tristique facilisis. Fusce ac orci velit. Ut vel feugiat nibh. Suspendisse quis velit scelerisque, cursus magna at, maximus eros. Mauris malesuada felis nec commodo vehicula. Aliquam sit amet sodales risus.</p>
+        <p>Maecenas in lectus lorem. Donec eget porta felis, quis suscipit sapien. Nulla at sapien in nisi accumsan sollicitudin. Sed pellentesque vitae massa nec bibendum. Nulla suscipit mattis felis sit amet gravida. Maecenas ullamcorper dolor nibh, eget congue justo pharetra vel. Donec nisi quam, placerat a commodo et, ullamcorper malesuada felis. Proin ac sapien rutrum, venenatis augue et, ultricies lacus. Nam imperdiet a est faucibus aliquam.</p>
+        <button type="button" class="c-button c-button--back js-resource-back">Back</button>
+      </article>
     </section>
   </main>
-
+  <main>
+  </main>
   <footer class="c-footer">
     <nav class="c-nav">
-      <a class="c-nav__icon" href="#"><img alt="Home" src="icons/google-fonts-home.svg" /></a>
+      <a class="c-nav__icon" href="javascript:void(0)"><img alt="Home" src="icons/google-fonts-home.svg" /></a>
     </nav>
   </footer>
 </body>

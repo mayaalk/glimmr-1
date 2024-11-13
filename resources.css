@@ -1,0 +1,40 @@
+@import "main.css";
+
+.c-search { display: flex; }
+
+.c-search__label {
+  overflow: hidden;
+  width: 0;
+}
+
+.c-search__input {
+  border: 1px solid gray;
+  border-radius: 4px 0 0 4px; /*left side*/
+  border-right: 0;
+  color: purple;
+  flex-grow: 1;
+  padding: 8px;
+}
+
+.c-search__button {
+  background-color: gray;
+  border-radius: 0 4px 4px 0; /*right side*/
+  cursor: default;
+}
+
+.c-resources { margin: 0; }
+
+.c-resources__link {
+  color: purple;
+  display: flex;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.c-link__head {
+  font-size: 24px;
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+
+.c-link__body { margin: 0; }

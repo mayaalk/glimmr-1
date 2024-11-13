@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glimmr</title>
-  <link rel="stylesheet" href="main.css" />
-  <script defer src="main.js"></script>
+  <title>Glimmr - Community Guidelines</title>
+  <link rel="stylesheet" href="community-guidelines.css" />
+  <script defer src="community-guidelines.js"></script>
 </head>
 <body class="c-body">
   <header class="c-header">
@@ -13,9 +13,9 @@
     <details class="c-header__menu c-menu">
       <summary class="c-menu__icon"></summary>
       <nav class="c-menu__list">
-        <a class="c-menu__item" href="#"><img alt="Community Guidelines" src="icons/google-fonts-community.svg" /></a>
-        <a class="c-menu__item" href="#"><img alt="Resources" src="icons/google-fonts-resources.svg" /></a>
-        <a class="c-menu__item" href="#"><img alt="Feedback" src="icons/google-fonts-feedback.svg" /></a>
+        <a class="c-menu__item" href="index.html"><img alt="Community Guidelines" src="icons/google-fonts-community.svg" /></a>
+        <a class="c-menu__item" href="resources.html"><img alt="Resources" src="icons/google-fonts-resources.svg" /></a>
+        <a class="c-menu__item" href="feedback.html"><img alt="Feedback" src="icons/google-fonts-feedback.svg" /></a>
       </nav>
     </details>
   </header>
@@ -34,10 +34,10 @@
       <article class="c-modal__container js-modal-start-inner">
         <h3 class="c-modal__head">Report a User</h3>
         <hr />
-        <form class="c-modal__body c-form js-modal-form">
+        <form class="c-modal__body c-report js-modal-report">
           <p>We're truly sorry that you've had a bad experience on our platform. Your safety and comfort is our top priority.</p>
           <label for="f-name">Who do you need to report? *</label>
-          <select class="c-form__select js-name-select" id="f-name" required>
+          <select class="c-report__select js-name-select" id="f-name" required>
             <option value="0"></option>
             <option value="1">Noel</option>
             <option value="2">Haven</option>
@@ -45,8 +45,8 @@
             <option value="4">Kit</option>
             <option value="5">Madison</option>
           </select>
-          <fieldset class="c-form__group">
-            <legend class="c-form__label">Can you tell us what happened?</legend>
+          <fieldset class="c-report__group">
+            <legend class="c-report__label">Can you tell us what happened?</legend>
             <label for="f-safety">
               <input id="f-safety" name="contact" type="checkbox" value="safety" />
               I felt unsafe.
@@ -65,9 +65,9 @@
             </label>
           </fieldset>
           <label for="f-description">Would you like to provide any other information?</label>
-          <textarea class="c-form__description" id="f-description"></textarea>
-          <fieldset class="c-form__group">
-            <legend class="c-form__label">Do you consent to us reviewing your messages?</legend>
+          <textarea class="c-report__description" id="f-description"></textarea>
+          <fieldset class="c-report__group">
+            <legend class="c-report__label">Do you consent to us reviewing your messages?</legend>
             <label for="f-consent-yes">
               <input id="f-consent-yes" name="consent" type="radio" value="yes" />
               Yes
@@ -77,8 +77,8 @@
               No
             </label>
           </fieldset>
-          <fieldset class="c-form__group">
-            <legend class="c-form__label">Would you like to talk to one of our Community Advocates?</legend>
+          <fieldset class="c-report__group">
+            <legend class="c-report__label">Would you like to talk to one of our Community Advocates?</legend>
             <label for="f-contact-yes">
               <input class="js-contact-yes" id="f-contact-yes" name="contact" type="radio" value="yes" />
               Yes
@@ -88,7 +88,7 @@
               No
             </label>
           </fieldset>
-          <fieldset class="c-form__submit">
+          <fieldset class="c-report__submit">
             <button class="c-button js-button-submit" type="submit">Submit</button>
             <button class="c-button c-button--back js-button-cancel" type="button">Cancel</button>
           </fieldset>
@@ -108,7 +108,7 @@
   </main>
   <footer class="c-footer">
     <nav class="c-nav">
-      <a class="c-nav__icon" href="#"><img alt="Home" src="icons/google-fonts-home.svg" /></a>
+      <a class="c-nav__icon" href="javascript:void(0)"><img alt="Home" src="icons/google-fonts-home.svg" /></a>
     </nav>
   </footer>
 </body>
