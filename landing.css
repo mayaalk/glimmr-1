@@ -1,0 +1,18 @@
+@import "lib.css";
+
+.c-landing {
+  display: grid;
+  gap: 32px;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+}
+
+.c-landing__logo {
+  font-size: 64px;
+  align-self: end;
+}
+
+.c-landing__form {
+  align-self: baseline;
+  justify-self: center;
+}

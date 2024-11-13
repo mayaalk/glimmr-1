@@ -3,113 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glimmr - Community Guidelines</title>
-  <link rel="stylesheet" href="community.css" />
-  <script defer src="community.js"></script>
+  <title>Glimmr</title>
+  <link rel="stylesheet" href="landing.css" />
+  <script defer src="landing.js"></script>
 </head>
 <body class="c-body">
-  <header class="c-header">
-    <h1 class="c-header__logo">Glimmr</h1>
-    <details class="c-header__menu c-menu">
-      <summary class="c-menu__icon"></summary>
-      <nav class="c-menu__list">
-        <a class="c-menu__item" href="index.html"><img alt="Community Guidelines" src="icons/google-fonts-community.svg" /></a>
-        <a class="c-menu__item" href="resources.html"><img alt="Resources" src="icons/google-fonts-resources.svg" /></a>
-        <a class="c-menu__item" href="feedback.html"><img alt="Feedback" src="icons/google-fonts-feedback.svg" /></a>
-      </nav>
-    </details>
+  <header class="c-header c-landing">
+    <h1 class="c-header__logo c-landing__logo">Glimmr</h1>
+    <form class="c-landing__form">
+      <button class="c-button c-button--light js-button-login" type="submit">Login</button>
+    </form>
   </header>
-  <main>
-    <section class="c-content">
-      <h2 class="c-content__head">Community<br />Guidelines</h2>
-      <hr />
-      <article class="c-content__body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi diam ligula, mollis pharetra eros eu, egestas eleifend odio. Donec non risus ultricies ligula consequat bibendum. Ut nec risus ex. Proin quis sapien eget felis rutrum convallis nec et ex. Etiam purus erat, egestas ac nisi non, ultricies laoreet augue. Sed sed risus quis odio iaculis faucibus. Integer posuere tellus et elementum cursus. Curabitur fermentum nec tortor quis laoreet. Suspendisse dictum, augue non convallis commodo, diam ipsum dapibus augue, vitae lacinia tortor velit a nisi. Aenean at nibh dictum, ornare enim vitae, volutpat sapien. Duis lobortis finibus venenatis. Phasellus fringilla sodales elit sed faucibus. Etiam tincidunt arcu et lorem dapibus scelerisque. Maecenas eget libero dictum, rutrum purus ac, sagittis velit. Curabitur sem felis, aliquet a justo ut, condimentum congue ex. Aenean pretium est nec porttitor pretium.</p>
-        <p>Nullam efficitur placerat eros nec sagittis. Aliquam lacinia risus sed gravida fringilla. Maecenas sed quam tempus, tempus ipsum sit amet, finibus mi. Praesent nibh purus, tempor interdum risus eget, porta efficitur neque. Proin a tellus non arcu placerat efficitur eu eget eros. Suspendisse potenti. Ut accumsan congue ipsum nec laoreet. Ut placerat sit amet magna sed rhoncus. Nulla sed dictum quam. Maecenas vulputate pellentesque facilisis. In iaculis libero a nibh tristique facilisis. Fusce ac orci velit. Ut vel feugiat nibh. Suspendisse quis velit scelerisque, cursus magna at, maximus eros. Mauris malesuada felis nec commodo vehicula. Aliquam sit amet sodales risus.</p>
-        <p>Maecenas in lectus lorem. Donec eget porta felis, quis suscipit sapien. Nulla at sapien in nisi accumsan sollicitudin. Sed pellentesque vitae massa nec bibendum. Nulla suscipit mattis felis sit amet gravida. Maecenas ullamcorper dolor nibh, eget congue justo pharetra vel. Donec nisi quam, placerat a commodo et, ullamcorper malesuada felis. Proin ac sapien rutrum, venenatis augue et, ultricies lacus. Nam imperdiet a est faucibus aliquam.</p>
-        <button class="c-button c-button--main js-button-report" type="button">Report</button>
-      </article>
-    </section>
-    <aside class="c-modal js-modal-start is-hidden">
-      <article class="c-modal__container js-modal-start-inner">
-        <h3 class="c-modal__head">Report a User</h3>
-        <hr />
-        <form class="c-modal__body c-report js-form-report">
-          <p>We're truly sorry that you've had a bad experience on our platform. Your safety and comfort is our top priority.</p>
-          <label for="f-name">Who do you need to report? *</label>
-          <select class="c-input" id="f-name" name="name" required>
-            <option value="0"></option>
-            <option value="1">Noel</option>
-            <option value="2">Haven</option>
-            <option value="3">Sydney</option>
-            <option value="4">Kit</option>
-            <option value="5">Madison</option>
-          </select>
-          <fieldset class="c-fieldset">
-            <legend class="c-legend">Can you tell us what happened?</legend>
-            <label class="c-label" for="f-safety">
-              <input id="f-safety" name="report" type="checkbox" value="safety" />
-              I felt unsafe.
-            </label>
-            <label class="c-label" for="f-consent">
-              <input id="f-consent" name="report" type="checkbox" value="consent" />
-              My boundaries weren't respected.
-            </label>
-            <label class="c-label" for="f-honesty">
-              <input id="f-honesty" name="report" type="checkbox" value="honesty" />
-              I was lied to.
-            </label>
-            <label class="c-label" for="f-other">
-              <input id="f-other" name="report" type="checkbox" value="other" />
-              Something else happened.
-            </label>
-          </fieldset>
-          <label for="f-description">Would you like to provide any other information?</label>
-          <textarea class="c-textarea" id="f-description" maxlength="1500" name="description" placeholder="300 words or less"></textarea>
-          <fieldset class="c-fieldset">
-            <legend class="c-legend">Do you consent to us reviewing your messages?</legend>
-            <label class="c-label" for="f-review-yes">
-              <input id="f-review-yes" name="review" type="radio" value="yes" />
-              Yes
-            </label>
-            <label class="c-label" for="f-review-no">
-              <input id="f-review-no" name="review" type="radio" value="no" />
-              No
-            </label>
-          </fieldset>
-          <fieldset class="c-fieldset">
-            <legend class="c-legend">Would you like to talk to one of our Community Advocates?</legend>
-            <label class="c-label" for="f-contact-yes">
-              <input id="f-contact-yes" name="contact" type="radio" value="yes" />
-              Yes
-            </label>
-            <label class="c-label" for="f-contact-no">
-              <input id="f-contact-no" name="contact" type="radio" value="no" />
-              No
-            </label>
-          </fieldset>
-          <fieldset class="c-fieldset c-report__submit">
-            <button class="c-button js-button-submit" type="submit">Submit</button>
-            <button class="c-button c-button--back js-button-cancel" type="button">Cancel</button>
-          </fieldset>
-        </form>
-      </article>
-    </aside>
-    <aside class="c-modal js-modal-finish is-hidden">
-      <article class="c-modal__container js-modal-finish-inner">
-        <h3 class="c-modal__head">Report a User</h3>
-        <hr />
-        <div class="c-modal__body">
-          <p>Thank you for helping make our platform safer for everyone.<span class="js-text-contact is-hidden"> One of our Community Advocates will reach out to you as soon as possible.</span></p>
-          <button class="c-button c-button--main js-button-ok" type="button">OK</button>
-        </div>
-      </article>
-    </aside>
-  </main>
-  <footer class="c-footer">
-    <nav class="c-nav">
-      <a class="c-nav__icon" href="index.html"><img alt="Home" src="icons/google-fonts-home.svg" /></a>
-    </nav>
-  </footer>
 </body>
 </html>

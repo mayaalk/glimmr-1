@@ -1,4 +1,4 @@
-@import "main.css";
+@import "lib.css";
 
 .c-report {
   max-height: calc(667px - 2 * 64px - 2 * 16px - 24px - 1.6px - 2 * 16px);
