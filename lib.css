@@ -44,11 +44,12 @@ p {
   background-color: purple;
   color: white;
   display: flex;
-  height: 76px; /*flush with menu*/
+  height: 75.2px; /*flush with menu*/
 }
 
 .c-header__logo {
   font-family: "Pacifico", serif;
+  margin-left: 16px;
   padding: 16px;
 }
 
@@ -57,7 +58,7 @@ p {
   display: flex;
   flex-flow: column;
   position: absolute;
-  right: 0;
+  right: 16px;
   top: 0;
 }
 
@@ -183,7 +184,11 @@ p {
   right: 0;
 }
 
-.c-nav { background-color: purple; }
+.c-nav {
+  background-color: purple;
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .c-nav__icon {
   display: block;
