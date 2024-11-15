@@ -20,13 +20,26 @@
   border-radius: 0 4px 4px 0; /*right side*/
 }
 
-.c-resources { margin: 0; }
+.c-resources {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  margin: 0;
+}
 
 .c-resources__link {
   color: purple;
   display: flex;
   gap: 16px;
   text-decoration: none;
+}
+
+.c-resources__none {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .c-link__head {

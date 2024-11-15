@@ -6,6 +6,7 @@ const DOMSearchButton = document.querySelector(".js-search-button");
 const DOMResourceList = document.querySelector(".js-resource-list");
 const DOMResourceLinks = document.querySelectorAll(".js-resource-link");
 const DOMResourceNames = document.querySelectorAll(".js-resource-name");
+const DOMResourceNone = document.querySelector(".js-resource-none");
 
 const DOMResourceItem = document.querySelector(".js-resource-item");
 const DOMResourceHead = document.querySelector(".js-resource-head");
@@ -19,21 +20,20 @@ DOMSearchButton.addEventListener("click", (event) => {
   DOMResourceNames.forEach((Name, i) => {
     const Link = DOMResourceLinks[i];
 
-    if (Name.textContent.toLowerCase().includes(DOMSearchInput.value.toLowerCase())) {
-      Link.classList.remove("is-hidden");
+    const show = Name.textContent.toLowerCase().includes(DOMSearchInput.value.toLowerCase());
+
+    Link.classList.toggle("is-hidden", !show);
+
+    if (show) {
       List.push(Link);
-    } else {
-      Link.classList.add("is-hidden");
     }
   });
 
   List.forEach((Link, i, arr) => {
-    if (i < arr.length - 1) {
-      Link.classList.add("has-sibling");
-    } else {
-      Link.classList.remove("has-sibling");
-    }
+    Link.classList.toggle("has-sibling", i < arr.length - 1);
   });
+
+  DOMResourceNone.classList.toggle("is-hidden", List.length);
 });
 
 DOMResourceLinks.forEach((Link, i) => {

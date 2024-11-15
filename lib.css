@@ -80,6 +80,8 @@ p {
 .c-menu__item { padding: 16px; }
 
 .c-content {
+  display: flex;
+  flex-flow: column;
   height: calc(667px - 2 * 76px - 2 * 16px);
   line-height: 1.5;
   overflow: auto;
@@ -94,6 +96,7 @@ p {
 .c-content__body {
   display: flex;
   flex-flow: column;
+  flex-grow: 1;
   gap: 16px;
 }
 

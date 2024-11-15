@@ -33,11 +33,7 @@ DOMButtonSubmit.addEventListener("click", (event) => {
   const inputs = new FormData(DOMFormReport);
 
   if (inputs.get("name") > 0) {
-    if (inputs.get("contact") === "yes") {
-      DOMTextContact.classList.remove("is-hidden");
-    } else {
-      DOMTextContact.classList.add("is-hidden");
-    }
+    DOMTextContact.classList.toggle("is-hidden", inputs.get("contact") !== "yes");
 
     DOMModalStart.classList.add("is-hidden");
     DOMModalFinish.classList.remove("is-hidden");
