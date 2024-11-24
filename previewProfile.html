@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="c-background" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glimmr - Preview Profile</title>
+  <link rel="stylesheet" href="createProfile.css" />
+</head>
+<body class="c-body">
+  <!-- Header -->
+  <header class="c-header">
+    <h1 class="c-header__logo">Glimmr</h1>
+    <details class="c-header__menu c-menu">
+      <summary class="c-menu__icon"></summary>
+      <nav class="c-menu__list">
+        <a class="c-menu__item" href="community.html"><img alt="Community Guidelines" src="icons/google-fonts-community.svg" /></a>
+        <a class="c-menu__item" href="resources.html"><img alt="Resources" src="icons/google-fonts-resources.svg" /></a>
+        <a class="c-menu__item" href="feedback.html"><img alt="Feedback" src="icons/google-fonts-feedback.svg" /></a>
+      </nav>
+    </details>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Profile Preview</h1>
+
+    <!-- Profile Picture -->
+    <div class="profile-picture">
+      <img id="profilePicturePreview" src="#" alt="Profile Picture" class="profile-picture__img" />
+    </div>
+
+    <!-- Profile Information -->
+    <div class="profile-info">
+      <p><strong>Name:</strong> <span id="namePreview"></span></p>
+      <p><strong>Age:</strong> <span id="agePreview"></span></p>
+      <p><strong>Gender:</strong> <span id="genderPreview"></span></p>
+      <p><strong>Location:</strong> <span id="locationPreview"></span></p>
+      <p><strong>Height:</strong> <span id="heightPreview"></span></p>
+      <p><strong>Body Type:</strong> <span id="bodyTypePreview"></span></p>
+      <p><strong>Education:</strong> <span id="educationPreview"></span></p>
+      <p><strong>Religion:</strong> <span id="religionPreview"></span></p>
+      <p><strong>Political Views:</strong> <span id="politicalViewsPreview"></span></p>
+      <p><strong>Pets:</strong> <span id="petsPreview"></span></p>
+      <p><strong>Smoking:</strong> <span id="smokingPreview"></span></p>
+      <p><strong>Drinking:</strong> <span id="drinkingPreview"></span></p>
+      <p><strong>Activity Level:</strong> <span id="activityLevelPreview"></span></p>
+      <p><strong>Dating Preference:</strong> <span id="datingPreferencePreview"></span></p>
+      <p><strong>Relationship Type:</strong> <span id="relationshipTypePreview"></span></p>
+      <p><strong>Family Plans:</strong> <span id="familyPlansPreview"></span></p>
+      <p><strong>Relationship Style:</strong> <span id="relationshipStylePreview"></span></p>
+      <p><strong>About Me:</strong> <span id="bioPreview"></span></p>
+      <p><strong>Interests:</strong> <span id="interestsPreview"></span></p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <button type="button" id="backButton" class="back-button">Back</button>
+      <button type="button" id="editButton" class="edit-button">Edit</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to dynamically load data into the preview page
+    document.getElementById("backButton").addEventListener("click", function () {
+      window.history.back();
+    });
+
+    document.getElementById("editButton").addEventListener("click", function () {
+      window.location.href = "editProfile.html"; // Redirect to the edit page
+    });
+
+    // Function to display profile data in preview fields
+    function loadProfileData() {
+      // Assuming data is stored in localStorage or passed as a JavaScript object
+      const profileData = JSON.parse(localStorage.getItem("profileData")); // Replace with actual data source
+
+      // Profile Picture
+      document.getElementById("profilePicturePreview").src = profileData.profilePicture || "#"; // Default to a placeholder if no picture
+
+      // Fill the profile details
+      document.getElementById("namePreview").textContent = profileData.name || "N/A";
+      document.getElementById("agePreview").textContent = profileData.age || "N/A";
+      document.getElementById("genderPreview").textContent = profileData.gender || "N/A";
+      document.getElementById("locationPreview").textContent = profileData.location || "N/A";
+      document.getElementById("heightPreview").textContent = profileData.height || "N/A";
+      document.getElementById("bodyTypePreview").textContent = profileData.bodyType || "N/A";
+      document.getElementById("educationPreview").textContent = profileData.education || "N/A";
+      document.getElementById("religionPreview").textContent = profileData.religion || "N/A";
+      document.getElementById("politicalViewsPreview").textContent = profileData.politicalViews || "N/A";
+      document.getElementById("petsPreview").textContent = profileData.pets || "N/A";
+      document.getElementById("smokingPreview").textContent = profileData.smoking || "N/A";
+      document.getElementById("drinkingPreview").textContent = profileData.drinking || "N/A";
+      document.getElementById("activityLevelPreview").textContent = profileData.activityLevel || "N/A";
+      document.getElementById("datingPreferencePreview").textContent = profileData.datingPreference || "N/A";
+      document.getElementById("relationshipTypePreview").textContent = profileData.relationshipType || "N/A";
+      document.getElementById("familyPlansPreview").textContent = profileData.familyPlans || "N/A";
+      document.getElementById("relationshipStylePreview").textContent = profileData.relationshipStyle || "N/A";
+      document.getElementById("bioPreview").textContent = profileData.bio || "N/A";
+      document.getElementById("interestsPreview").textContent = profileData.interests || "N/A";
+    }
+
+    // Load profile data when the page is ready
+    window.onload = loadProfileData;
+  </script>
+</body>
+</html>
