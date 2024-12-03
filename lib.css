@@ -100,6 +100,13 @@ p {
   gap: 16px;
 }
 
+.c-subheading { text-align: left; }
+
+.c-subsection {
+  border-top: 1px dotted purple;
+  margin: 0;
+}
+
 .c-button {
   align-self: center;
   background-color: purple;
@@ -153,6 +160,11 @@ p {
   min-height: 128px;
   resize: none;
   padding: 8px;
+}
+
+.c-list {
+  margin: 0;
+  padding-left: 28px;
 }
 
 .c-modal {

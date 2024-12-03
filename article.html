@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glimmr - Resources</title>
-  <link rel="stylesheet" href="resources.css" />
-  <script defer src="resources.js"></script>
+  <title>Glimmr - Article</title>
+  <link rel="stylesheet" href="article.css" />
+  <script defer src="article.js"></script>
 </head>
 <body class="c-body">
   <header class="c-header">
@@ -21,18 +21,13 @@
   </header>
   <main>
     <section class="c-content">
-      <h2 class="c-content__head">Resources</h2>
+      <h2 class="c-content__head js-article-head"></h2>
       <hr />
-      <article class="c-content__body">
-        <form class="c-search">
-          <label class="c-search__label" for="f-search">Search</label>
-          <input class="c-search__input js-search-input" id="f-search" placeholder="Search by title" type="text" />
-          <button class="c-button c-search__button js-search-button" type="submit">Search</button>
-        </form>
-        <dl class="c-resources js-resource-list">
-          <!--render-->
-          <dt class="c-resources__none js-resource-none is-hidden">No results</dt>
-        </dl>
+      <article class="c-content__body js-article-body">
+        <!--render-->
+        <a class="u-center" href="resources.html">
+          <button type="button" class="c-button c-button--light">Back</button>
+        </a>
       </article>
     </section>
   </main>

@@ -51,7 +51,7 @@
 .c-link__body { margin: 0; }
 
 .has-sibling {
-  border-bottom: 1px solid purple;
+  border-bottom: 1px dotted purple;
   margin-bottom: 16px;
   padding-bottom: 16px;
 }
