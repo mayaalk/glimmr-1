@@ -1,104 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="c-background" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preferences</title>
-    <link rel="stylesheet" href="main.css">
-    <script defer src="main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glimmr - Preferences</title>
+  <link rel="stylesheet" href="preferences.css" />
+  <script defer src="preferences.js"></script>
 </head>
 <body class="c-body">
-    <header class="c-header">
-        <h1 class="c-header__logo">Glimmr</h1>
-        <details class="c-header__menu c-menu">
-            <summary class="c-menu__icon"></summary>
-            <nav class="c-menu__list">
-                <a class="c-menu__item" href="index.html">
-                    <img alt="Home" src="icons/google-fonts-home.svg">
-                    <span>Home</span>
-                </a>
-                <a class="c-menu__item" href="resources.html">
-                    <img alt="Resources" src="icons/google-fonts-resources.svg">
-                    <span>Resources</span>
-                </a>
-                <a class="c-menu__item" href="preferences.html">
-                    <img alt="Preferences" src="icons/google-fonts-preferences.svg">
-                    <span>Preferences</span>
-                </a>
-            </nav>
-        </details>
-    </header>
-
-    <main>
-        <section class="c-content">
-            <h2 class="c-content__head">Preferences</h2>
-            <hr class="c-content__divider">
-            <p class="c-content__intro">
-                Please tell us more about whom you would like to meet by using the preferences below and selecting the option that best fits your ideal match. These selections will determine the profiles you are shown, as well as the potential matches your profile will be viewed by. You are not required to disclose any information that would make you uncomfortable; however, it’s important to be honest. Misrepresenting information is against our community guidelines.
-            </p>
-            <form class="c-form preferences-form" action="#" method="post">
-                
-                <div class="c-form__group">
-                    <label class="c-form__label" for="min-age">Age Range (18-100 years old):</label>
-                    <input class="c-form__input" type="number" id="min-age" name="min-age" placeholder="Min age (18)" min="18" max="100" required>
-                    <input class="c-form__input" type="number" id="max-age" name="max-age" placeholder="Max age (100)" min="18" max="100" required>
-                </div>
-
-                <div class="c-form__group">
-                    <label class="c-form__label" for="gender">Gender:</label>
-                    <select class="c-form__select" id="gender" name="gender" multiple>
-                        <option value="men">Men</option>
-                        <option value="women">Women</option>
-                        <option value="non-binary">Non-binary</option>
-                    </select>
-                </div>
-
-                <div class="c-form__group">
-                    <label class="c-form__label" for="location">Location (distance in miles):</label>
-                    <select class="c-form__select" id="location" name="location">
-                        <option value="5">5 miles</option>
-                        <option value="10">10 miles</option>
-                        <option value="15">15 miles</option>
-                        <option value="20">20 miles</option>
-                        <option value="25">25 miles</option>
-                        <option value="50">50 miles</option>
-                        <option value="100">100 miles</option>
-                    </select>
-                </div>
-
-                <h2 class="c-content__subhead">Physical</h2>
-                <div class="c-form__group">
-                    <label class="c-form__label" for="min-height">Height (4'0" – 7'0"):</label>
-                    <input class="c-form__input" type="number" id="min-height" name="min-height" placeholder="Min height (in inches)" min="48" max="84">
-                    <input class="c-form__input" type="number" id="max-height" name="max-height" placeholder="Max height (in inches)" min="48" max="84">
-                </div>
-
-                <div class="c-form__group">
-                    <label class="c-form__label" for="body-type">Body Type:</label>
-                    <select class="c-form__select" id="body-type" name="body-type" multiple>
-                        <option value="slim">Slim</option>
-                        <option value="stocky">Stocky</option>
-                        <option value="full-figured">Full-figured</option>
-                        <option value="average">Average</option>
-                        <option value="fit-athletic">Fit/Athletic</option>
-                    </select>
-                </div>
-                <div class="c-form__group">
-                    <label class="c-form__label" for="last-active">Last Active Date:</label>
-                    <input class="c-form__input" type="date" id="last-active" name="last-active">
-                </div>
-
-                <button class="c-button c-button--main" type="submit">Save Preferences</button>
-            </form>
-        </section>
-    </main>
-
-    <footer class="c-footer">
-        <nav class="c-nav">
-            <a class="c-nav__icon" href="index.html">
-                <img alt="Home" src="icons/google-fonts-home.svg">
-            </a>
-        </nav>
-    </footer>
+  <header class="c-header">
+    <h1 class="c-header__logo">Glimmr</h1>
+    <details class="c-header__menu c-menu">
+      <summary class="c-menu__icon"></summary>
+      <nav class="c-menu__list">
+        <a class="c-menu__item" href="community.html"><img alt="Community Guidelines" src="icons/google-fonts-community.svg" /></a>
+        <a class="c-menu__item" href="resources.html"><img alt="Resources" src="icons/google-fonts-resources.svg" /></a>
+        <a class="c-menu__item" href="feedback.html"><img alt="Feedback" src="icons/google-fonts-feedback.svg" /></a>
+      </nav>
+    </details>
+  </header>
+  <main>
+    <section class="c-content">
+      <h2 class="c-content__head">Preferences</h2>
+      <hr class="c-content__divider">
+      <p class="c-content__intro">Please tell us more about whom you would like to meet by using the preferences below and selecting the option that best fits your ideal match. These selections will determine the profiles you are shown, as well as the potential matches your profile will be viewed by. You are not required to disclose any information that would make you uncomfortable; however, it’s important to be honest. Misrepresenting information is against our community guidelines.</p>
+      <form class="c-form preferences-form" action="#" method="post">
+        <div class="c-form__group">
+          <label class="c-form__label" for="min-age">Age Range (18-100 years old):</label>
+          <input class="c-form__input" type="number" id="min-age" name="min-age" placeholder="Min age (18)" min="18" max="100" required>
+          <input class="c-form__input" type="number" id="max-age" name="max-age" placeholder="Max age (100)" min="18" max="100" required>
+        </div>
+        <div class="c-form__group">
+          <label class="c-form__label" for="gender">Gender:</label>
+          <select class="c-form__select" id="gender" name="gender" multiple>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+            <option value="non-binary">Non-binary</option>
+          </select>
+        </div>
+        <div class="c-form__group">
+          <label class="c-form__label" for="location">Location (distance in miles):</label>
+          <select class="c-form__select" id="location" name="location">
+            <option value="5">5 miles</option>
+            <option value="10">10 miles</option>
+            <option value="15">15 miles</option>
+            <option value="20">20 miles</option>
+            <option value="25">25 miles</option>
+            <option value="50">50 miles</option>
+            <option value="100">100 miles</option>
+          </select>
+        </div>
+        <h2 class="c-content__subhead">Physical</h2>
+        <div class="c-form__group">
+          <label class="c-form__label" for="min-height">Height (4'0" – 7'0"):</label>
+          <input class="c-form__input" type="number" id="min-height" name="min-height" placeholder="Min height (in inches)" min="48" max="84">
+          <input class="c-form__input" type="number" id="max-height" name="max-height" placeholder="Max height (in inches)" min="48" max="84">
+        </div>
+        <div class="c-form__group">
+          <label class="c-form__label" for="body-type">Body Type:</label>
+          <select class="c-form__select" id="body-type" name="body-type" multiple>
+            <option value="slim">Slim</option>
+            <option value="stocky">Stocky</option>
+            <option value="full-figured">Full-figured</option>
+            <option value="average">Average</option>
+            <option value="fit-athletic">Fit/Athletic</option>
+          </select>
+        </div>
+        <div class="c-form__group">
+          <label class="c-form__label" for="last-active">Last Active Date:</label>
+          <input class="c-form__input" type="date" id="last-active" name="last-active">
+        </div>
+        <button class="c-button c-button--main" type="submit">Save Preferences</button>
+      </form>
+    </section>
+  </main>
+  <footer class="c-footer">
+    <nav class="c-nav">
+      <a class="c-nav__icon" href="javascript:void(0)"><img alt="Home" src="icons/google-fonts-home.svg" /></a>
+      <a class="c-nav__icon" href="javascript:void(0)"><img alt="Profile" src="icons/google-fonts-profile.svg" /></a>
+      <a class="c-nav__icon" href="javascript:void(0)"><img alt="Swipe" src="icons/google-fonts-swipe.svg" /></a>
+      <a class="c-nav__icon" href="javascript:void(0)"><img alt="Messages" src="icons/google-fonts-messages.svg" /></a>
+    </nav>
+  </footer>
 </body>
 </html>
