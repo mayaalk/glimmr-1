@@ -28,7 +28,6 @@
 }
 
 .c-resources__link {
-  color: purple;
   display: flex;
   gap: 16px;
   text-decoration: none;
