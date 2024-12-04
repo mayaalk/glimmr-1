@@ -197,10 +197,35 @@ p {
   padding: 16px;
 }
 
+.c-modal__container--decision {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  margin: 0 auto;
+  width: 75%;
+}
+
 .c-modal__body {
   display: flex;
   flex-flow: column;
   gap: 16px;
+}
+
+.c-modal__body--decision {
+  flex-flow: row;
+  gap: 0;
+  justify-content: space-evenly;
+}
+
+.c-report {
+  max-height: calc(667px - 2 * 64px - 2 * 16px - 24px - 1.6px - 2 * 16px);
+  overflow: auto;
+}
+
+.c-report__submit {
+  flex-flow: row;
+  gap: 0;
+  justify-content: space-evenly;
 }
 
 .c-footer {

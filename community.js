@@ -24,10 +24,26 @@ const DOMModalFinishInner = document.querySelector(".js-modal-finish-inner");
 const DOMFormReport = document.querySelector(".js-form-report");
 const DOMTextContact = document.querySelector(".js-text-contact");
 
+const Modals = [
+  [DOMModalStart, DOMModalStartInner],
+  [DOMModalFinish, DOMModalFinishInner]
+];
+
+Modals.forEach(([Modal, ModalInner]) => {
+  Modal.addEventListener("click", () => {
+    Modal.classList.add("is-hidden");
+  });
+
+  ModalInner.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+});
+
 document.addEventListener("keyup", (event) => {
   if (event.key === "Escape") {
-    DOMModalStart.classList.add("is-hidden");
-    DOMModalFinish.classList.add("is-hidden");
+    Modals.forEach(([Modal]) => {
+      Modal.classList.add("is-hidden");
+    });
   }
 });
 
@@ -57,20 +73,4 @@ DOMButtonCancel.addEventListener("click", () => {
 
 DOMButtonOk.addEventListener("click", () => {
   DOMModalFinish.classList.add("is-hidden");
-});
-
-DOMModalStart.addEventListener("click", () => {
-  DOMModalStart.classList.add("is-hidden");
-});
-
-DOMModalStartInner.addEventListener("click", (event) => {
-  event.stopPropagation();
-});
-
-DOMModalFinish.addEventListener("click", () => {
-  DOMModalFinish.classList.add("is-hidden");
-});
-
-DOMModalFinishInner.addEventListener("click", (event) => {
-  event.stopPropagation();
 });

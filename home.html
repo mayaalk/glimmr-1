@@ -23,14 +23,14 @@
   </header>
   <main>
     <section class="c-content js-resource-list">
-      <h2 class="c-content__head">Hi Ellie, welcome to <em>Glimmr</em>!</h2>
+      <h2 class="c-content__head">Hi Ellie, Welcome to <em>Glimmr</em>!</h2>
       <p class="c-content__subtitle">A place where respect, safety, and sincerity meet.</p>
       <hr />
       <article class="c-content__body">
         <h3 class="c-subheading">Featured Tip</h3>
         <p class="c-quote">"Online dating doesn't have to be daunting. Visit our <a href="resources.html">Resources</a> page for articles on safety, confidence, and creating authentic connections."</p>
         <h3 class="c-subheading">Our Mission</h3>
-        <p>At Glimmr, we're reimagining online dating by putting women's experiences first. As a non-profit, our sole focus is creating a safe, inclusive, empowering space.</p>
+        <p>At <em>Glimmr</em>, we're reimagining online dating by putting women's experiences first. As a non-profit, our sole focus is creating a safe, inclusive, empowering space.</p>
         <h3 class="c-subheading">Getting Started</h3>
         <ol>
           <li>Create Your Profile: Share your story and let your personality shine.</li>
@@ -48,12 +48,95 @@
           </a>
           <a href="index.html">
             <button class="c-button c-button--light">Sign Out</button>
-          </a>  
+          </a>
         </nav>
       </article>
     </section>
-  </main>
-  <main>
+    <aside class="c-modal js-modal-survey is-hidden">
+      <article class="c-modal__container c-modal__container--decision js-modal-survey-inner">
+        <h3 class="c-modal__head">Did Your Date with Alex Go OK?</h3>
+        <div class="c-modal__body c-modal__body--decision">
+          <button class="c-button js-button-yes" type="button">Yes</button>
+          <button class="c-button js-button-no" type="button">No</button>  
+        </div>
+      </article>
+    </aside>
+    <aside class="c-modal js-modal-start is-hidden">
+      <article class="c-modal__container js-modal-start-inner">
+        <h3 class="c-modal__head">Report a User</h3>
+        <hr />
+        <form class="c-modal__body c-report js-form-report">
+          <p>We're truly sorry that you've had a bad experience on our platform. Your safety and comfort is our top priority.</p>
+          <label for="f-name">Who do you need to report? *</label>
+          <select class="c-input" id="f-name" name="name" required>
+            <option value="0"></option>
+            <option selected value="1">Alex</option>
+            <option value="2">Taylor</option>
+            <option value="3">Jordan</option>
+            <option value="4">Morgan</option>
+            <option value="5">Casey</option>
+            <option value="6">Riley</option>
+          </select>
+          <fieldset class="c-fieldset">
+            <legend class="c-legend">Can you tell us what happened?</legend>
+            <label class="c-label" for="f-safety">
+              <input id="f-safety" name="report" type="checkbox" value="safety" />
+              I felt unsafe.
+            </label>
+            <label class="c-label" for="f-consent">
+              <input id="f-consent" name="report" type="checkbox" value="consent" />
+              My boundaries weren't respected.
+            </label>
+            <label class="c-label" for="f-honesty">
+              <input id="f-honesty" name="report" type="checkbox" value="honesty" />
+              I was lied to.
+            </label>
+            <label class="c-label" for="f-other">
+              <input id="f-other" name="report" type="checkbox" value="other" />
+              Something else happened.
+            </label>
+          </fieldset>
+          <label for="f-description">Would you like to provide any other information?</label>
+          <textarea class="c-textarea" id="f-description" maxlength="1500" name="description" placeholder="300 words or less"></textarea>
+          <fieldset class="c-fieldset">
+            <legend class="c-legend">Do you consent to us reviewing your messages?</legend>
+            <label class="c-label" for="f-review-yes">
+              <input id="f-review-yes" name="review" type="radio" value="yes" />
+              Yes
+            </label>
+            <label class="c-label" for="f-review-no">
+              <input id="f-review-no" name="review" type="radio" value="no" />
+              No
+            </label>
+          </fieldset>
+          <fieldset class="c-fieldset">
+            <legend class="c-legend">Would you like to talk to one of our Community Advocates?</legend>
+            <label class="c-label" for="f-contact-yes">
+              <input id="f-contact-yes" name="contact" type="radio" value="yes" />
+              Yes
+            </label>
+            <label class="c-label" for="f-contact-no">
+              <input id="f-contact-no" name="contact" type="radio" value="no" />
+              No
+            </label>
+          </fieldset>
+          <fieldset class="c-fieldset c-report__submit">
+            <button class="c-button js-button-submit" type="submit">Submit</button>
+            <button class="c-button c-button--light js-button-cancel" type="button">Cancel</button>
+          </fieldset>
+        </form>
+      </article>
+    </aside>
+    <aside class="c-modal js-modal-finish is-hidden">
+      <article class="c-modal__container js-modal-finish-inner">
+        <h3 class="c-modal__head">Report a User</h3>
+        <hr />
+        <div class="c-modal__body">
+          <p>Thank you for helping make our platform safer for everyone.<span class="js-text-contact is-hidden"> One of our Community Advocates will reach out to you as soon as possible.</span></p>
+          <button class="c-button js-button-ok" type="button">OK</button>
+        </div>
+      </article>
+    </aside>
   </main>
   <footer class="c-footer">
     <nav class="c-nav">
