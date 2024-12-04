@@ -1,11 +1,22 @@
 "use strict"
 
+const DOMNavProfile = document.querySelector(".js-nav-profile");
+const DOMNavSwipe = document.querySelector(".js-nav-swipe");
+
+DOMNavProfile.addEventListener("click", () => {
+  sessionStorage.page = "profile";
+});
+
+DOMNavSwipe.addEventListener("click", () => {
+  sessionStorage.page = "swipe";
+});
+
 document.getElementById('previewButton').addEventListener('click', function() {
-  window.location.href = 'previewProfile.html';
+  window.location.href = 'preview-profile.html';
 });
 
 document.getElementById('backButton').addEventListener('click', function() {
-  // Redirect to previewProfile.html when the Preview button is clicked
+  // Redirect to preview-profile.html when the Preview button is clicked
   window.location.href = 'decision.html';
 });
 

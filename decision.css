@@ -1,3 +1,18 @@
 @import "lib.css";
 
-h1 { margin-bottom: 20px; }
+.c-decision {
+  align-items: center;
+  gap: 32px;
+  justify-content: center;
+}
+
+.c-decision__head {
+  width: 50%;
+}
+
+.c-decision__body {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}

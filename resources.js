@@ -1,5 +1,16 @@
 "use strict";
 
+const DOMNavProfile = document.querySelector(".js-nav-profile");
+const DOMNavSwipe = document.querySelector(".js-nav-swipe");
+
+DOMNavProfile.addEventListener("click", () => {
+  sessionStorage.page = "profile";
+});
+
+DOMNavSwipe.addEventListener("click", () => {
+  sessionStorage.page = "swipe";
+});
+
 const DOMSearchInput = document.querySelector(".js-search-input");
 const DOMSearchButton = document.querySelector(".js-search-button");
 
@@ -101,6 +112,6 @@ DOMSearchButton.addEventListener("click", (event) => {
 
 DOMResourceLinkAll.forEach((Link, i) => {
   Link.addEventListener("click", () => {
-    localStorage.article = JSON.stringify(articles[i]);
+    sessionStorage.article = JSON.stringify(articles[i]);
   });
 });

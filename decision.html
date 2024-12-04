@@ -21,21 +21,26 @@
       </nav>
     </details>
   </header>
-  <div class="c-content">
-    <h1>Select the Type of Profile You Want</h1>
-    <div class="c-content__body">
-      <button class="c-button" onclick="location.href='createProfile.html'">Create a Romantic Profile</button>
-      <button class="c-button" onclick="location.href='createProfile.html'">Create a Casual Profile</button>
-      <h1>Already have a profile? Edit it:</h1>
-      <button class="c-button" onclick="location.href='editProfile.html'">Edit a Romantic Profile</button>
-      <button class="c-button" onclick="location.href='editProfile.html'">Edit a Casual Profile</button>
-    </div>
-  </div>
+  <main>
+    <section class="c-content">
+      <article class="c-content__body c-decision">
+        <h2 class="c-content__head c-decision__head">What Are You Looking For?</h2>
+        <nav class="c-decision__body">
+          <a class="js-link-romance" href="javascript:void(0)">
+            <button class="c-button js-button-romance">Meaningful Connections</button>
+          </a>
+          <a class="js-link-sex" href="javascript:void(0)">
+            <button class="c-button js-button-sex">Casual Fun</button>
+          </a>
+        </nav>  
+      </article>
+    </section>
+  </main>
   <footer class="c-footer">
     <nav class="c-nav">
       <a class="c-nav__icon" href="home.html"><img alt="Home" src="icons/google-fonts-home.svg" /></a>
-      <a class="c-nav__icon" href="javascript:void(0)"><img alt="Profile" src="icons/google-fonts-profile.svg" /></a>
-      <a class="c-nav__icon" href="javascript:void(0)"><img alt="Swipe" src="icons/google-fonts-swipe.svg" /></a>
+      <a class="c-nav__icon js-nav-profile" href="decision.html"><img alt="Profile" src="icons/google-fonts-profile.svg" /></a>
+      <a class="c-nav__icon js-nav-swipe" href="decision.html"><img alt="Swipe" src="icons/google-fonts-swipe.svg" /></a>
       <a class="c-nav__icon" href="javascript:void(0)"><img alt="Messages" src="icons/google-fonts-messages.svg" /></a>
     </nav>
   </footer>
