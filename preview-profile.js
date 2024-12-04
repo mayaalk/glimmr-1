@@ -17,7 +17,7 @@ document.getElementById("backButton").addEventListener("click", function() {
 });
 
 document.getElementById("editButton").addEventListener("click", function() {
-  window.location.href = "editProfile.html"; // Redirect to the edit page
+  window.location.href = "edit-profile.html"; // Redirect to the edit page
 });
 
 // Function to display profile data in preview fields
